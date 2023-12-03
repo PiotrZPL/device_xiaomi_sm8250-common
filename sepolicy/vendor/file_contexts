@@ -79,7 +79,7 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@4\.0-service             u:object_r:hal_misys_default_exec:s0
 
 # NFC
-/vendor/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service                u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc-service\.nxp u:object_r:hal_nfc_default_exec:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                        u:object_r:persist_subsys_file:s0
@@ -106,9 +106,6 @@
 # USB
 /vendor/bin/init\.mi\.usb\.sh                                           u:object_r:vendor_qti_init_shell_exec:s0
 
-# Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_kona    u:object_r:hal_vibrator_default_exec:s0
-
 # Widevine
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[0-4]-service.clearkey                                     u:object_r:vendor_hal_drm_widevine_exec:s0
 
@@ -124,9 +121,3 @@
 
 # SDX55M tombstones
 /data/vendor/tombstones/SDX55M(/.*)?           u:object_r:mdm_tombstone_data_file:s0
-
-# Data files
-/data/vendor/dolby(/.*)?   u:object_r:vendor_data_file:s0
-
-# Dolby
-/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                        u:object_r:hal_dms_default_exec:s0
